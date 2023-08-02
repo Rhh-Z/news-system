@@ -15,3 +15,5 @@ npm run dev
 ```
 npm run server
 ```
+超级管理员账户:admin,密码:123456
+

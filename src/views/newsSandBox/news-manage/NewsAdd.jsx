@@ -30,14 +30,12 @@ export default function NewsAdd() {
         setFormInfo(res)
         setCurrent(current + 1)
       }).catch(err => {
-        console.log(err);
+        // console.log(err);
       })
     } else {
       // content去重 防止输入回车也能点击下一步
       let arr = content.split('\n')
-      console.log(arr);
       let newArr = [...new Set(arr)].join('').trim()
-      console.log(newArr);
       if (content === '' || newArr === '<ol><li></li></ol>' || newArr === '<p></p>' || newArr === '<ul><li></li></ul>') {
         message.error('新闻内容不能为空')
       } else {

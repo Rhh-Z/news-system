@@ -100,12 +100,11 @@ export default function Home() {
     }
   }
 
-
   const renderPie = (data) => {
     // 数据处理
     const currentList = data.filter(item => item.author === username)
     let gruopData = _.groupBy(currentList, item => item.category.title)
-    console.log(gruopData);
+
     let list = []
     for (let key in gruopData) {
       list.push({
